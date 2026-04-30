@@ -1,0 +1,14 @@
+@import './base.css';
+
+#app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+a {
+  color: var(--c-gold);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+a:hover { color: var(--c-gold-light); }
