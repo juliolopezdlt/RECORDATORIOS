@@ -31,6 +31,7 @@ const props = defineProps({
 var valueInput = ref("");
 
 async function anadirElemento() {
+  console.log("nombre: " + props.nombreUsuario);
   if (valueInput.value.trim() === "") return;
 
   URLArchivo = "";

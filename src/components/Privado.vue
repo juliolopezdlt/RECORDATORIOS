@@ -28,9 +28,12 @@ onMounted(() => {
 
     <NuevoRecordatorio
       :idUsuario="usuario.uid"
-      :nombreUsuario="usuario.email"
+      :nombreUsuario="usuario.displayName ?? usuario.email"
     />
-    <ListaComponentes :idUsuario="usuario.uid" />
+    <ListaComponentes
+      :idUsuario="usuario.uid"
+      :nombreUsuario="usuario.displayName ?? usuario.email"
+    />
   </div>
 </template>
 <style scoped>
@@ -40,8 +43,14 @@ div {
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h2 {
